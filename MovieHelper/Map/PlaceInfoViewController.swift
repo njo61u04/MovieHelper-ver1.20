@@ -20,7 +20,7 @@ class PlaceInfoViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.font = UIFont.preferredFont(forTextStyle: .title1)
-        label.textColor = .systemYellow
+        label.textColor = .black
         return label
     }()
     
@@ -30,7 +30,7 @@ class PlaceInfoViewController: UIViewController {
         label.textAlignment = .left
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.alpha = 0.4
-        label.textColor = .white
+        label.textColor = .darkGray
         return label
     }()
     
@@ -41,8 +41,8 @@ class PlaceInfoViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage.init(systemName: "location.fill"), for: .normal)
         button.setTitle("導航", for: .normal)
-        button.tintColor = .systemYellow
-        button.titleLabel?.tintColor = .white
+        button.tintColor = .systemPurple
+        button.titleLabel?.tintColor = .black
         return button
     }()
     
@@ -53,8 +53,8 @@ class PlaceInfoViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage.init(systemName: "phone.arrow.up.right.fill"), for: .normal)
         button.setTitle("撥號", for: .normal)
-        button.tintColor = .systemYellow
-        button.titleLabel?.tintColor = .white
+        button.tintColor = .systemPurple
+        button.titleLabel?.tintColor = .black
         return button
     }()
     init(place: PlaceAnnotation) {
@@ -69,7 +69,7 @@ class PlaceInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(named: "MapColor")
     }
     
     //MARK: 設定彈出畫面的介面
@@ -82,7 +82,7 @@ class PlaceInfoViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 20//UIStackView.spacingUseSystem
         stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+        stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 60, leading: 20, bottom: 20, trailing: 20)
         
         //設定label文字
         nameLabel.text = place.name

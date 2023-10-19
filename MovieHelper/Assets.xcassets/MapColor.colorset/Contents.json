@@ -2,12 +2,12 @@
   "colors" : [
     {
       "color" : {
-        "color-space" : "display-p3",
+        "color-space" : "srgb",
         "components" : {
           "alpha" : "1.000",
-          "blue" : "1.000",
-          "green" : "0.314",
-          "red" : "0.697"
+          "blue" : "0.921",
+          "green" : "0.928",
+          "red" : "0.928"
         }
       },
       "idiom" : "universal"
@@ -16,8 +16,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "localizable" : true
   }
 }
