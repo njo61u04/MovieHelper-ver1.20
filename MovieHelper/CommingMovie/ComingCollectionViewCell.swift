@@ -10,13 +10,13 @@ import WebKit
 
 class ComingCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameENLabel: UILabel!
     @IBOutlet weak var nameCHLabel: UILabel!
     @IBOutlet weak var borderView: UIView!
-    @IBOutlet weak var posterWebView: WKWebView!
     
     func setup(with movie: ComingMovieKeys) {
         nameCHLabel.text = movie.Title
@@ -40,14 +40,11 @@ extension ComingCollectionViewCell: WKNavigationDelegate {
         borderView.layer.cornerRadius = 10.0
         borderView.clipsToBounds = true
         
-        guard let url = URL(string: url) else {
+        guard let posterUrl = URL(string: url) else {
             assertionFailure("URL error")
             return
         }
-        let request = URLRequest(url: url)
-        posterWebView.load(request)
-        posterWebView.navigationDelegate = self
-        posterWebView.isUserInteractionEnabled = false
+        self.posterImageView.kf.setImage(with: posterUrl)
     }
     
     func ageLabelSetup() {

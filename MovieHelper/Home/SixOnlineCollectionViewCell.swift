@@ -7,12 +7,13 @@
 
 import UIKit
 import WebKit
+import Kingfisher
 
 class SixOnlineCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var nameEN: UILabel!
     @IBOutlet weak var nameCH: UILabel!
-    @IBOutlet weak var poster: WKWebView!
     @IBOutlet weak var posterView: UIView!
     
     func setup(with movie: OnlineMovieKeys) {
@@ -32,14 +33,10 @@ extension SixOnlineCollectionViewCell: WKNavigationDelegate {
         posterView.layer.cornerRadius = 10.0
         posterView.clipsToBounds = true
         
-        guard let url = URL(string: url) else {
+        guard let posterUrl = URL(string: url) else {
             assertionFailure("URL error")
             return
         }
-        let request = URLRequest(url: url)
-        poster.load(request)
-        poster.navigationDelegate = self
-        poster.isUserInteractionEnabled = false
-
+        self.posterImageView.kf.setImage(with: posterUrl)
     }
 }

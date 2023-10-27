@@ -10,9 +10,9 @@ import WebKit
 
 class OnlineCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var borderView: UIView!
-    @IBOutlet weak var posterWebView: WKWebView!
     @IBOutlet weak var nameCHLabel: UILabel!
     @IBOutlet weak var nameENLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -39,14 +39,11 @@ extension OnlineCollectionViewCell: WKNavigationDelegate {
         borderView.layer.cornerRadius = 10.0
         borderView.clipsToBounds = true
         
-        guard let url = URL(string: url) else {
+        guard let posterUrl = URL(string: url) else {
             assertionFailure("URL error")
             return
         }
-        let request = URLRequest(url: url)
-        posterWebView.load(request)
-        posterWebView.navigationDelegate = self
-        posterWebView.isUserInteractionEnabled = false
+        self.posterImageView.kf.setImage(with: posterUrl)
     }
     
     func ageLabelSetup() {

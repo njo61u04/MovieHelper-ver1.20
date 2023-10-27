@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import Kingfisher
 
 class InfoViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class InfoViewController: UIViewController {
     var onlineURL = CatchDataHelper.shared.onlineMovies
     var comingURL = CatchDataHelper.shared.comingMovies
 
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var rtLabel: UILabel!
     @IBOutlet weak var imdbLabel: UILabel!
@@ -26,7 +28,6 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var nameENLabel: UILabel!
     @IBOutlet weak var nameCHLabel: UILabel!
     @IBOutlet weak var infoView: UIView!
-    @IBOutlet weak var infoWebView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,14 +78,12 @@ extension InfoViewController: WKNavigationDelegate {
     //show web view
     func posterSetup(url: String) {
         
-        guard let url = URL(string: url) else {
+        guard let posterUrl = URL(string: url) else {
             assertionFailure("URL error")
             return
         }
-        let request = URLRequest(url: url)
-        infoWebView.load(request)
-        infoWebView.navigationDelegate = self
-        infoWebView.isUserInteractionEnabled = false
+        posterImageView.kf.setImage(with: posterUrl)
+        posterImageView.contentMode = .top
     }
     
     func infoViewSetup() {
