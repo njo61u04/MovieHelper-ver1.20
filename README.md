@@ -18,11 +18,11 @@
 
 ## 檔案結構
 
-- 讀取上映中電影並用`collection view`呈現
+- 讀取上映中電影並用`Collection View`呈現
 <[MovieHelper/OnlineMovie](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/OnlineMovie)>
-- 讀取即將上映電影並用`collection view`呈現
+- 讀取即將上映電影並用`Collection View`呈現
 <[MovieHelper/CommingMovie](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/CommingMovie)>
-- 讀取票房電影並用`collection view`呈現
+- 讀取票房電影並用`Collection View`呈現
 <[MovieHelper/BoxOffice](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/BoxOffice)>
 - 顯示附近的電影院，做法是用`MKLocalSearch`搜尋關鍵字“電影院”，並把搜尋到的結果用`MapView`在地圖上建立圖標顯示。每個圖標點了之後可以導航到這個電影院或致電。
 <[MovieHelper/Map](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/Map)>
