@@ -18,5 +18,9 @@
 
 ## 檔案結構
 
+- 讀取上映中電影並用collection view呈現
+<[MovieHelper/OnlineMovie](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/OnlineMovie)>
 - 讀取即將上映電影並用collection view呈現
 <[MovieHelper/CommingMovie](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/CommingMovie)>
+- 讀取票房電影並用collection view呈現
+<[MovieHelper/BoxOffice](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/BoxOffice)>
