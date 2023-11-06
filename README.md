@@ -10,3 +10,8 @@
 - 開發環境的配置要求為xcode
 - 電影相關資訊是先用python的爬蟲技術從第三方網站抓資料下來放到firebase，再由這隻程式讀取firebase的資料
 
+##使用套件
+
+- Kingfisher
+- Firebase
+- GoogleSignIn
