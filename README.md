@@ -15,3 +15,6 @@
 - Kingfisher
 - Firebase
 - GoogleSignIn
+
+## 檔案結構
+MovieHelper/CommingMovie
