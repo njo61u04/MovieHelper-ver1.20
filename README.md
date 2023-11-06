@@ -17,4 +17,6 @@
 - GoogleSignIn
 
 ## 檔案結構
-<MovieHelper/CommingMovie>
+
+- 讀取即將上映電影並用collection view呈現
+<[MovieHelper/CommingMovie](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/CommingMovie)>
