@@ -28,4 +28,5 @@
 <[MovieHelper/Map](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/Map)>
 - 點選電影欄位時會導到詳細資訊畫面，這些程式是負責呈現點選電影之詳細資訊。主要做法是將三個`Container View`包在`Scroll View`裡面，分別呈現電影資訊、時刻表和預告片，可以藉由滑動或點選上方的`Segmented Control`來切換頁面
 <[MovieHelper/MovieInformation](https://github.com/njo61u04/MovieHelper-ver1.20/tree/main/MovieHelper/MovieInformation)>
-
+- 存放常用之function，主要為讀取`Firebase`上資料的function
+<[MovieHelper/CatchDataHelper.swift](https://github.com/njo61u04/MovieHelper-ver1.20/blob/main/MovieHelper/CatchDataHelper.swift)>
